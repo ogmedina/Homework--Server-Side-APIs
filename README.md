@@ -4,7 +4,7 @@
 
 ### Description
 
-This is the fifth assignment for the UTSA Full-Stack Bootcamp. This is a weather dashboard that runs in the browser and features dynamically updated HTML and CSS. It uses the [OpenWeather API](https://openweather.org/api) to retrieve data for cities.
+This is the fifth assignment for the UTSA Full-Stack Bootcamp. This is a weather dashboard that runs in the browser and features dynamically updated HTML and CSS. It uses the [OpenWeather API](https://openweathermap.org/api) to retrieve data for cities.
 
 * Dashboard has search functionality with form inputs.
 
