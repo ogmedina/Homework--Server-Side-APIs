@@ -32,7 +32,7 @@ $.ajax({
     $(".humidity").html("<h6>" + "Humidity: " + response.list[0].main.humidity + " %" + "</h6>");    
     $(".wind").html("<h6>" + "Wind Speed: " + response.list[0].wind.speed + " MPH" + "</h6>");
     //2nd ajax call from API for UV Index URL declared as variable 
-    var queryURLUV = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=c24c77657bb5fc9d770bfb807a1ef0f8"; 
+    var queryURLUV = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=c24c77657bb5fc9d770bfb807a1ef0f8"; 
 
     //ajax call for UV -- data saved into resuls
     $.ajax({
