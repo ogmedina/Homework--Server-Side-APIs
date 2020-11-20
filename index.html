@@ -19,8 +19,8 @@
             <div class = "row">
                 <div class = "col-md-12">
                     <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" id = "search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id = "button">Search</button>
                       </form>                   
                 </div>
             </div>
@@ -49,11 +49,75 @@
 
     <section>
     <div id = "container">
-        <div class = "row">
+        <div class = "row weather">
             <div class = "col-md-12">
-                Weather
+                
+                <div class="city"></div><!-- This is a stock City, replace with what was clicked -->                
+                <div class="mainimage"></div><!-- This is where the little icon will go-->
+                <br>
+                <div class="tempF"></div> <!-- Insert Temperature -->
+                <br>
+                <div class="humidity"></div> <!-- Insert Humidity -->
+                <br>
+                <div class="wind"></div><!-- Insert Wind Speed -->
+                <br>
+                <div class="uv"></div><!-- Insert UV Index-->
+                <br>
             </div>
 
+        </div>
+
+        <div class = "row cards">
+            <div class = "col-md-12">
+                <br>
+                <h4>5-Day Forecast:</h4>          
+            </div>
+        </div>
+
+        <div class = "row cards2">
+            
+            <div class="card">
+                <div class="card-body">
+                  <h5 style="font-weight: bold;">8/16/2019</h5>
+                  <p>Icon</p>
+                  <p>Temp: </p>
+                  <p>Humidity: </p>
+                </div>
+              </div>
+            
+              <div class="card">
+                <div class="card-body">
+                    <h5 style="font-weight: bold;">8/16/2019</h5>
+                    <p>Icon</p>
+                    <p>Temp: </p>
+                    <p>Humidity: </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                    <h5 style="font-weight: bold;">8/16/2019</h5>
+                    <p>Icon</p>
+                    <p>Temp: </p>
+                    <p>Humidity: </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                    <h5 style="font-weight: bold;">8/16/2019</h5>
+                    <p>Icon</p>
+                    <p>Temp: </p>
+                    <p>Humidity: </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                    <h5 style="font-weight: bold;">8/16/2019</h5>
+                    <p>Icon</p>
+                    <p>Temp: </p>
+                    <p>Humidity: </p>
+                </div>
+              </div>
+           
         </div>
 
 
@@ -61,5 +125,7 @@
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="Assets/script.js"></script>
 </body>
 </html>
