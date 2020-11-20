@@ -9,6 +9,13 @@ var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&
 //Date is from the moment.js library and formated
 var currentDate = moment().format('MM/DD/YYYY')
 
+$(".futureMoment1").text(moment().add(1, 'days').format('L')); 
+$(".futureMoment2").text(moment().add(2, 'days').format('L')); 
+$(".futureMoment3").text(moment().add(3, 'days').format('L')); 
+$(".futureMoment4").text(moment().add(4, 'days').format('L')); 
+$(".futureMoment5").text(moment().add(5, 'days').format('L')); 
+
+
 //first ajax call for forcast -- data is saved into response
 $.ajax({
     url: queryURL,
@@ -31,6 +38,39 @@ $.ajax({
     $(".tempF").html("<h6>" + "Temperature: " + tempF.toFixed(1) + " &#8457;" + "</h6>");
     $(".humidity").html("<h6>" + "Humidity: " + response.list[0].main.humidity + " %" + "</h6>");    
     $(".wind").html("<h6>" + "Wind Speed: " + response.list[0].wind.speed + " MPH" + "</h6>");
+
+    //future day 1
+    $(".futureIcon1").html("<img src='https://openweathermap.org/img/wn/" + response.list[8].weather[0].icon + ".png'>")
+    var tempF1 = (response.list[8].main.temp - 273.15) * 1.80 + 32;
+    $(".futureTemp1").html("Temperature: " + tempF1.toFixed(1) + " &#8457;");
+    $(".futureHum1").html("Humidity: " + response.list[8].main.humidity + " %");
+
+    //future day 2
+    $(".futureIcon2").html("<img src='https://openweathermap.org/img/wn/" + response.list[16].weather[0].icon + ".png'>")
+    var tempF2 = (response.list[16].main.temp - 273.15) * 1.80 + 32;
+    $(".futureTemp2").html("Temperature: " + tempF2.toFixed(1) + " &#8457;");
+    $(".futureHum2").html("Humidity: " + response.list[16].main.humidity + " %");
+
+    //future day 3
+    $(".futureIcon3").html("<img src='https://openweathermap.org/img/wn/" + response.list[24].weather[0].icon + ".png'>")
+    var tempF3 = (response.list[24].main.temp - 273.15) * 1.80 + 32;
+    $(".futureTemp3").html("Temperature: " + tempF3.toFixed(1) + " &#8457;");
+    $(".futureHum3").html("Humidity: " + response.list[24].main.humidity + " %");
+
+    //future day 4
+    $(".futureIcon4").html("<img src='https://openweathermap.org/img/wn/" + response.list[32].weather[0].icon + ".png'>")
+    var tempF4 = (response.list[32].main.temp - 273.15) * 1.80 + 32;
+    $(".futureTemp4").html("Temperature: " + tempF4.toFixed(1) + " &#8457;");
+    $(".futureHum4").html("Humidity: " + response.list[32].main.humidity + " %");
+
+    //future day 5
+    $(".futureIcon5").html("<img src='https://openweathermap.org/img/wn/" + response.list[39].weather[0].icon + ".png'>")
+    var tempF5 = (response.list[39].main.temp - 273.15) * 1.80 + 32;
+    $(".futureTemp5").html("Temperature: " + tempF5.toFixed(1) + " &#8457;");
+    $(".futureHum5").html("Humidity: " + response.list[39].main.humidity + " %"); 
+
+
+
     //2nd ajax call from API for UV Index URL declared as variable 
     var queryURLUV = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=c24c77657bb5fc9d770bfb807a1ef0f8"; 
 
@@ -56,51 +96,9 @@ $.ajax({
             $(".color").css("background-color", "green");
             $(".color").css("color", "white");
         }
-
-
-
-    });
-    
-
-
-
-    
-   // console.log(response.clouds);
-
-   // console.log(response.name);
-
-   // var results = response.data; 
-
- //   console.log(results[0].name);
-
-  
+    });  
 
     
 });
 
-
-
-
 });
-
-//forecast is the 5 day plus projection, it comes in at 7 different times, want to focus on 9:00 and 12:00
-//but if the user logs in late in the day? does it automatically go into the next days forecast?
-//also need to work on second ajax call for the projection or can both go into the same response?
-
-
-//https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-
-
-//"https://api.openweathermap.org/data/2.5/forecast?lat="
-
-//https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
-
-//"https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=c24c77657bb5fc9d770bfb807a1ef0f8";
-
-
-//navigator.geolocation.getCurrentPosition(function(position){
-//let lat = position.coords.latitude.toFixed(2);
-//let long = position.coords.longitude.toFixed(2);
-
-//console.log(lat);
-//console.log(long);
