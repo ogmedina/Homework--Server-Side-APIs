@@ -23,4 +23,4 @@ Here is a link to the GitHub deployed Site: [Weather Dashboard](https://ogmedina
 
 ### Screenshots
 
-[Weather](./Images/weatherforecast.jpg) 
+![weatherpicture](https://github.com/ogmedina/Homework--Server-Side-APIs/blob/main/Images/weatherforecast.JPG)
