@@ -11,47 +11,32 @@
 <body>
     <header>
         <h1>Weather Dashboard</h1>
-    </header>
-    
-    <aside>
-    
+    </header>    
+    <aside>    
         <div id = "container">
             <div class = "row">
                 <div class = "col-md-12">
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" id = "search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id = "button">Search</button>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id = "searchButton">Search</button>
                       </form>                   
                 </div>
             </div>
             <br>
-
             <div class = "row">
                 <div class = "col-md 12">
-                    <div class="btn-group-vertical btn-block">
-                       <a href="" class= "btn btn-light cities">Austin</a>
-                        <a href="" class= "btn btn-light cities">Chicago</a>
-                        <a href="" class= "btn btn-light cities">New York</a>
-                        <a href="" class= "btn btn-light cities">Orlando</a>
-                        <a href="" class= "btn btn-light cities">San Francisco</a>
-                        <a href="" class= "btn btn-light cities">Denver</a>
-                        <a href="" class= "btn btn-light cities">Atlanta</a>                        
+                    <div class="btn-group-vertical btn-block" id = "saved">
+                        <div id = "buttons-view">
+                        </div>                                            
                     </div>
                 </div>
-            </div>
-
-            
-        </div>    
-        
+            </div>            
+        </div>        
     </aside>
-    
-
-
     <section>
     <div id = "container">
         <div class = "row weather">
-            <div class = "col-md-12">
-                
+            <div class = "col-md-12">                
                 <div class="city"></div><!-- This is a stock City, replace with what was clicked -->                
                 <div class="mainimage"></div><!-- This is where the little icon will go-->
                 <br>
@@ -64,18 +49,14 @@
                 <div class="uv"></div><!-- Insert UV Index-->
                 <br>
             </div>
-
         </div>
-
         <div class = "row cards">
             <div class = "col-md-12">
                 <br>
                 <h4>5-Day Forecast:</h4>          
             </div>
         </div>
-
-        <div class = "row cards2">
-            
+        <div class = "row cards2">            
             <div class="card">
                 <div class="card-body">
                   <div class = "futureMoment1"></div>
@@ -85,7 +66,6 @@
                   <div class = "futureHum1"></div>                  
                 </div>
               </div>
-
               <div class="card">
                 <div class="card-body">
                   <div class = "futureMoment2"></div>
@@ -95,7 +75,6 @@
                   <div class = "futureHum2"></div> 
                 </div>
               </div>
-
               <div class="card">
                 <div class="card-body">
                     <div class = "futureMoment3"></div>
@@ -105,7 +84,6 @@
                   <div class = "futureHum3"></div>                     
                 </div>
               </div>
-
               <div class="card">
                 <div class="card-body">
                     <div class = "futureMoment4"></div>
@@ -115,7 +93,6 @@
                   <div class = "futureHum4"></div>
                 </div>
               </div>
-
               <div class="card">
                 <div class="card-body">
                     <div class = "futureMoment5"></div>
@@ -128,7 +105,6 @@
         </div>
     </div>
     </section>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="Assets/script.js"></script>

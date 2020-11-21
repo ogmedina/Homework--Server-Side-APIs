@@ -1,6 +1,20 @@
+var citiesArr = [];
+
+function renderButtons(){
+    $("#saved").empty();
+    for (var i = 0; i < citiesArr.length; i++){
+        var divEl = $("<div>");
+        divEl.addClass("btn btn-light cities");
+       // a.attr("data-name", citiesArr[i]);
+        divEl.attr("id", "search");
+        divEl.text(citiesArr[i]);
+        $("#saved").append(divEl);
+        console.log("btn");        
+    }
+};
 
 //on search button click function begins
-$("#button").on("click", function(event){
+$("#searchButton").on("click", function(event){
     event.preventDefault();
 //a variable is assigned to city based on the value from the search button
 var city = $("#search").val();
@@ -8,13 +22,12 @@ var city = $("#search").val();
 var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=c24c77657bb5fc9d770bfb807a1ef0f8";
 //Date is from the moment.js library and formated
 var currentDate = moment().format('MM/DD/YYYY')
-
+//Days for forecast using moment.js
 $(".futureMoment1").text(moment().add(1, 'days').format('L')); 
 $(".futureMoment2").text(moment().add(2, 'days').format('L')); 
 $(".futureMoment3").text(moment().add(3, 'days').format('L')); 
 $(".futureMoment4").text(moment().add(4, 'days').format('L')); 
 $(".futureMoment5").text(moment().add(5, 'days').format('L')); 
-
 
 //first ajax call for forcast -- data is saved into response
 $.ajax({
@@ -69,7 +82,12 @@ $.ajax({
     $(".futureTemp5").html("Temperature: " + tempF5.toFixed(1) + " &#8457;");
     $(".futureHum5").html("Humidity: " + response.list[39].main.humidity + " %"); 
 
-
+    //list of search cities for <aside>
+    citiesArr.push(response.city.name);
+    console.log(citiesArr);
+    localStorage.setItem("citiesArr", response.city.name);
+    //var savedEl = document.querySelector("#saved");
+    renderButtons();
 
     //2nd ajax call from API for UV Index URL declared as variable 
     var queryURLUV = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=c24c77657bb5fc9d770bfb807a1ef0f8"; 
@@ -102,3 +120,5 @@ $.ajax({
 });
 
 });
+
+
