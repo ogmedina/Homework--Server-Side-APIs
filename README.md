@@ -23,4 +23,4 @@ Here is a link to the GitHub deployed Site: [Weather Dashboard](https://ogmedina
 
 ### Screenshots
 
-Coming soon! :D 
+[Weather](./Images/weatherforecast.jpg) 

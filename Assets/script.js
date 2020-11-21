@@ -1,7 +1,8 @@
+//array for saved cities
 var citiesArr = [];
-
+//function to crate buttons based on the citiesARR
 function renderButtons(){
-    $("#saved").empty();
+   $("#saved").empty();
     for (var i = 0; i < citiesArr.length; i++){
         var divEl = $("<div>");
         divEl.addClass("btn btn-light cities");
@@ -12,7 +13,6 @@ function renderButtons(){
         console.log("btn");        
     }
 };
-
 //on search button click function begins
 $("#searchButton").on("click", function(event){
     event.preventDefault();
@@ -114,11 +114,8 @@ $.ajax({
             $(".color").css("background-color", "green");
             $(".color").css("color", "white");
         }
-    });  
-
-    
+    });      
 });
-
 });
 
 
