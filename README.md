@@ -29,4 +29,4 @@ the humidity, the wind speed, and the UV index.
 
 ### Screenshots
 
-![weatherpicture](https://github.com/ogmedina/Homework--Server-Side-APIs/blob/main/Images/weatherforecast.JPG)
+![weatherpicture](https://github.com/ogmedina/Homework--Server-Side-APIs/blob/main/Images/Weather%20Dashboard.gif)
