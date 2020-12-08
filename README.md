@@ -1,7 +1,8 @@
 # Homework--Server-Side-APIs: Weather Dashboard
-
+```
+Live Site: https://ogmedina.github.io/Homework--Server-Side-APIs/
+```
 ## Full Stack Boot Camp Homework 5 - Weather Dashboard
-
 ### Description
 
 This is the fifth assignment for the UTSA Full-Stack Bootcamp. This is a weather dashboard that runs in the browser and features dynamically updated HTML and CSS. It uses the [OpenWeather API](https://openweathermap.org/api) to retrieve data for cities.
@@ -17,9 +18,14 @@ the humidity, the wind speed, and the UV index.
 
 * When you click on the city in the search history, you are presented with current and future conditions for that city.
 
-### Deployed Link
 
-Here is a link to the GitHub deployed Site: [Weather Dashboard](https://ogmedina.github.io/Homework--Server-Side-APIs/)
+### Technologies Used:
+#### Front End:
+   * HTML
+   * CSS
+   * JavaScript
+#### Back End:
+   * OpenWeather API
 
 ### Screenshots
 

@@ -1,23 +1,29 @@
 //array for saved cities
 var citiesArr = [];
+//citiesArr.push(city);
+
 //function to crate buttons based on the citiesARR
 function renderButtons(){
-   $("#saved").empty();
-    for (var i = 0; i < citiesArr.length; i++){
-        var divEl = $("<div>");
-        divEl.addClass("btn btn-light cities");
-       // a.attr("data-name", citiesArr[i]);
-        divEl.attr("id", "search");
-        divEl.text(citiesArr[i]);
-        $("#saved").append(divEl);
-        console.log("btn");        
-    }
-};
+    $("#saved").empty();
+     for (var i = 0; i < citiesArr.length; i++){
+         var divEl = $("<div>");
+         divEl.addClass("btn btn-light cities");       
+         divEl.attr("id", "search");
+         divEl.attr("data-name", citiesArr[i]);
+         divEl.text(citiesArr[i]);
+         $("#saved").append(divEl);
+         console.log("btn");        
+     }
+ };
+
 //on search button click function begins
 $("#searchButton").on("click", function(event){
     event.preventDefault();
+    
 //a variable is assigned to city based on the value from the search button
+
 var city = $("#search").val();
+
 //URL for forecast for the city with the API
 var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=c24c77657bb5fc9d770bfb807a1ef0f8";
 //Date is from the moment.js library and formated
@@ -88,6 +94,7 @@ $.ajax({
     localStorage.setItem("citiesArr", response.city.name);
     //var savedEl = document.querySelector("#saved");
     renderButtons();
+
 
     //2nd ajax call from API for UV Index URL declared as variable 
     var queryURLUV = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + long + "&appid=c24c77657bb5fc9d770bfb807a1ef0f8"; 
