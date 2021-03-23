@@ -1,11 +1,7 @@
-# Homework--Server-Side-APIs: Weather Dashboard
-```
-Live Site: https://ogmedina.github.io/Homework--Server-Side-APIs/
-```
-## Full Stack Boot Camp Homework 5 - Weather Dashboard
-### Description
+# Weather Dashboard
+![GitHub](https://img.shields.io/github/license/ogmedina/weather-dashboard)
 
-This is the fifth assignment for the UTSA Full-Stack Bootcamp. This is a weather dashboard that runs in the browser and features dynamically updated HTML and CSS. It uses the [OpenWeather API](https://openweathermap.org/api) to retrieve data for cities.
+This is a weather dashboard that runs in the browser and features dynamically updated HTML and CSS. It uses the [OpenWeather API](https://openweathermap.org/api) to retrieve data for cities.
 
 * Dashboard has search functionality with form inputs.
 
@@ -18,15 +14,40 @@ the humidity, the wind speed, and the UV index.
 
 * When you click on the city in the search history, you are presented with current and future conditions for that city.
 
+### Table of Contents
+
+* [Installation](#installation)
+* [Hosted Site](#hosted)
+* [Screenshots](#screenshots)
+* [License](#license)
+* [Technologies Used](#technologies%20used)
+* [Questions](#questions)
+
+### Installation
+Please begin by downloading the files onto your computer. Then open up index.html on your browser.
+
+
+### Hosted
+The app is hosted using GitHub Pages here at this link: [Weather Dashboard](https://ogmedina.github.io/Weather-Dashboard/)
+```
+Live Site: https://ogmedina.github.io/Weather-Dashboard/
+```
+
+### Screenshots 
+![weatherpicture](https://github.com/ogmedina/Weather-Dashboard/blob/main/Images/Weather%20Dashboard.gif)
+
+### License
+This project is licensed under the MIT License. 
 
 ### Technologies Used:
-#### Front End:
-   * HTML
-   * CSS
-   * JavaScript
-#### Back End:
-   * OpenWeather API
+Front End: 
+* HTML
+* CSS
+* JavaScript
+* [Bootstrap](https://getbootstrap.com/)
 
-### Screenshots
+Back End:
+* [OpenWeather API](https://openweathermap.org/api)
 
-![weatherpicture](https://github.com/ogmedina/Homework--Server-Side-APIs/blob/main/Images/Weather%20Dashboard.gif)
+### Questions
+If you have any questions about the repo, open an issue or contact me directly at ogmdeveloper0@gmail.com. You can find more of my work through my [GitHub Account](https://github.com/ogmedina/).
